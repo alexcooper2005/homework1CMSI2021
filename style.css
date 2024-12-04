@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(blue, violet);
+  }
+  article {
+    height: 100vh;
+  }
+  main {
+    height: 33%;
+    justify-content: center;
+    font-size: 13px;
+    font-family: "Sofia", sans-serif;
+    padding: 10px;
+    background-image: linear-gradient(white, yellow);
+    border-style: groove;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 25px;
+  }
+  header {
+    font-size: 30px;
+    font-family: "Audiowide", sans-serif;
+    padding: 10px;
+    background-image: linear-gradient(limegreen, green);
+    border-style: solid;
+    border-color: black; 
+    border-width: 5px;
+    border-radius: 50px;
+    text-align: center;
+  }
+  footer {
+    font-size: 20px;
+    font-family: "Lucida Console", "Courier New", cursive;
+    padding: 5px;
+    background-image: linear-gradient(limegreen, green);
+    border-width: 5px;
+    text-align: center;
+  }
+  
