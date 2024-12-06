@@ -1,38 +1,52 @@
 <!doctype html>
-    <html lang="en">
-        <head>
-            <link rel="stylesheet" href="style.css">
-            <script src="script.js"></script>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-        </head>
-        <body>
-            <article>
-                <header>
-                    <div>💹 The World's Best Compound Interest Calculator! 💹</div>
-                </header>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <main>
-                    <form>
-                        <div>Principal</div>
-                        <input type="text" id="principal">
-                        <img src="https://potomacpulse.org/wp-content/uploads/2023/03/stockmarket.jpeg" alt="Growth" align= "right" width="300" height="150">
-                        <div>Period</div>
-                        <input type="number" id="period">
-                        <div>APR</div>
-                        <p><input id="interest" type="range" min="1" max="100" value="2.5" step="1" oninput="updateSliderValue(this.value)"/>&nbsp<span id="sliderInput">1</span>%</p>
-                        <div>Years</div>
-                        <input type="number" id="years">
-                        <div align="right">
-                            <p>Interest Earned: <span id="interestOutput">$0.00</span></p>
-                            <p>Total Amount: <span id="totalOutput">$0.00</span></p>
-                        </div>
-                    </form>
-                </main>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <footer>
-                    <div>©2024 The Alexander Cooper Foundation</div>
-                </footer>
-            </article>
-        </body>
-    </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Lucida+Console">
+</head>
+<body>
+    <article>
+        <header>
+            <div>💹 The World's Best Compound Interest Calculator! 💹</div>
+        </header>
+        <main>
+            <form>
+                <div class="form-group">
+                    <label for="principal">Principal</label>
+                    <input type="text" id="principal">
+                </div>
+                <div class="form-group">
+                    <label for="period">Period</label>
+                    <input type="number" id="period">
+                </div>
+                <div class="form-group">
+                    <label for="interest">APR</label>
+                    <input id="interest" type="range" min="1" max="100" value="2.5" step="1" oninput="updateSliderValue(this.value)">
+                    <span id="sliderInput">1</span>%
+                </div>
+                <div class="form-group">
+                    <label for="years">Years</label>
+                    <input type="number" id="years">
+                </div>
+                <div class="results">
+                    <p>Interest Earned: <span id="interestOutput">$0.00</span></p>
+                    <p>Total Amount: <span id="totalOutput">$0.00</span></p>
+                </div>
+            </form>
+            <div class="image-container">
+                <img src="https://potomacpulse.org/wp-content/uploads/2023/03/stockmarket.jpeg" alt="Growth" />
+            </div>
+        </main>
+        <footer>
+            <div>
+                ©2024 The Alexander Cooper Foundation | 
+                <a href="https://example.com" target="_blank" rel="noopener noreferrer">Learn More</a>
+            </div>
+        </footer>
+    </article>
+</body>
+</html>

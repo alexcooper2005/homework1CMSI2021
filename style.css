@@ -1,40 +1,131 @@
 html {
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(blue, violet);
+  height: 100%;
+  width: 100%;
+  background: repeating-linear-gradient(
+      135deg, /* 135 degrees creates diagonal stripes */
+      blue 0,
+      blue 10px,
+      violet 10px,
+      violet 20px
+  );
+  background-size: 200% 200%;
+  animation: diagonalStripes 30s linear infinite;
+}
+
+@keyframes diagonalStripes {
+  0% {
+      background-position: 0 0;
   }
-  article {
-    height: 100vh;
+  100% {
+      background-position: 200% 200%;
   }
-  main {
-    height: 33%;
-    justify-content: center;
-    font-size: 13px;
-    font-family: "Sofia", sans-serif;
-    padding: 10px;
-    background-image: linear-gradient(white, yellow);
-    border-style: groove;
-    border-color: black;
-    border-width: 3px;
-    border-radius: 25px;
-  }
-  header {
-    font-size: 30px;
-    font-family: "Audiowide", sans-serif;
-    padding: 10px;
-    background-image: linear-gradient(limegreen, green);
-    border-style: solid;
-    border-color: black; 
-    border-width: 5px;
-    border-radius: 50px;
-    text-align: center;
-  }
-  footer {
-    font-size: 20px;
-    font-family: "Lucida Console", "Courier New", cursive;
-    padding: 5px;
-    background-image: linear-gradient(limegreen, green);
-    border-width: 5px;
-    text-align: center;
-  }
-  
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  margin: 0;
+  font-family: "Sofia", sans-serif;
+}
+
+article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+header {
+  font-size: 30px;
+  font-family: "Audiowide", sans-serif;
+  padding: 10px;
+  background-image: linear-gradient(limegreen, green);
+  border: 5px solid black;
+  border-radius: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 4px gray;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  font-size: 13px;
+  padding: 10px;
+  background-image: linear-gradient(white, yellow);
+  border: 3px groove black;
+  border-radius: 25px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  text-shadow: 1px 1px 2px gray;
+}
+
+main:hover {
+  transform: scale(1.05);
+}
+
+form {
+  grid-column: 1 / 2;
+  text-shadow: 1px 1px 2px gray;
+}
+
+.image-container {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.results {
+  grid-column: span 2;
+  text-align: right;
+  text-shadow: 1px 1px 2px gray;
+}
+
+footer {
+  font-size: 20px;
+  font-family: "Lucida Console", "Courier New", cursive;
+  padding: 10px;
+  background-image: linear-gradient(limegreen, green);
+  border-top: 5px solid black;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px black;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: yellow;
+}
+
+#interestOutput, #totalOutput {
+  font-weight: bold;
+  color: darkgreen;
+  text-shadow: 1px 1px 2px black;
+}
