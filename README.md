@@ -23,4 +23,8 @@ The **Compound Interest Calculator** is a web application that allows users to c
 - **No Transition or Animation**: Using some resources I found on the internet as to making moving backgrounds using CSS, I made an animation that is layers of stripes that move diagonally through the screen. Before this the background was gradient, which is still the case within individual boxes. But overall, the background is more exciting given that it moves.
 - **No Transform**: I added a transform where if you hover the mouse over the central calculator box, it slightly increases in size, making the site feel more interactive.
 - **No Text Shadow**: I applied text-shadow to all text seen throughout the site, making it look more visually appealing.
-- **No Footer Link**: I added a side link to have a hypothetical link that says "learn more", giving the impression of professionalism in this website. 
+- **No Footer Link**: I added a side link to have a hypothetical link that says "learn more", giving the impression of professionalism in this website.
+  
+ ## Link (GitHub Pages)
+
+ https://alexcooper2005.github.io/homework1CMSI2021/
